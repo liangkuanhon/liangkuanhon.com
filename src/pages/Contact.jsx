@@ -1,0 +1,68 @@
+// src/pages/Contact.jsx
+import { useRef, useState } from "react";
+import emailjs from "emailjs-com";
+import "./Contact.css";
+
+const Contact = () => {
+  const formRef = useRef(null);
+  const [status, setStatus] = useState({ message: "", color: "" });
+  const [lastSentTime, setLastSentTime] = useState(0);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const now = Date.now();
+    if (now - lastSentTime < 10000) {
+      setStatus({ message: "Please wait at least 10 seconds before submitting again.", color: "red" });
+      return;
+    }
+
+    const botField = formRef.current["bot-field"];
+    if (botField?.value !== "") {
+      console.warn("Spam detected.");
+      return;
+    }
+
+    emailjs
+      .sendForm("service_uedl79e", "template_qu7zerw", formRef.current, "t3lgF6u8-K6Q9DC6E")
+      .then(() => {
+        setStatus({ message: "✅ Message sent successfully!", color: "green" });
+        formRef.current.reset();
+        setLastSentTime(now);
+      })
+      .catch((err) => {
+        console.error("EmailJS error:", err);
+        setStatus({ message: "❌ Failed to send message. Please try again.", color: "red" });
+      });
+  };
+
+  return (
+    <main className="contact-main">
+      <form ref={formRef} onSubmit={sendEmail} id="contact-form">
+        <input type="text" name="bot-field" style={{ display: "none" }} autoComplete="off" tabIndex="-1" />
+        <div style={{ marginTop: "10px", fontWeight: "bold", color: status.color }}>
+          {status.message}
+        </div>
+
+        <label htmlFor="email">Your Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          required
+        />
+
+        <label htmlFor="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label htmlFor="message">Your Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  );
+};
+
+export default Contact;

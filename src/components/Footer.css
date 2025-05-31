@@ -1,0 +1,33 @@
+@import url('../styles/colors.css');
+@import url('../styles/typography.css');
+
+footer {
+  background-color: var(--color-secondary);
+  color: #6B5E3C;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #DDD7B1;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+footer a {
+  color: #C4B59B;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #A3936E;
+  text-decoration: underline;
+}
+
+.footer-link a:not(:last-child)::after {
+  content: "|";
+  margin-left: 0.5rem;
+  color: #ccc;
+}
