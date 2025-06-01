@@ -1,10 +1,14 @@
 :root {
   --font-primary: 'Playfair Display', serif;
-  --font-text: 'Merriweather Sans', sans-serif;
+  --font-text: 'Merriweather Sans', serif;
 }
 
 h1, h2, h3 {
   font-family: var(--font-primary);
+}
+
+p {
+  font-family: var(--font-text);
 }
 
 nav{

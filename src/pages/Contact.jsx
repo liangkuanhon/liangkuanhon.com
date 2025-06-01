@@ -11,6 +11,8 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    if (isSending) return;
+
     const now = Date.now();
     if (now - lastSentTime < 10000) {
       setStatus({ message: "Please wait at least 10 seconds before submitting again.", color: "red" });
@@ -37,7 +39,52 @@ const Contact = () => {
   };
 
   return (
-    <main className="contact-main">
+    <>
+    <main>
+      <div className="contact-wrapper">
+        <div className="contact-text-container">
+          <h1>Contact</h1>
+          <p>Get in touch with me via social media or send me an email.</p>
+
+          <div className="contact-links">
+            <a
+              href="https://linkedin.com/in/liangkuanhon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link linkedin"
+            >
+              <span className="icon-circle">
+                <i className="fab fa-linkedin"></i>
+              </span>
+              <span className="link-text">LinkedIn</span>
+            </a>
+
+            <a
+              href="https://instagram.com/liangkuanhon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link instagram"
+            >
+              <span className="icon-circle">
+                <i className="fab fa-instagram"></i>
+              </span>
+              <span className="link-text">Instagram</span>
+            </a>
+          </div>
+        </div>
+
+        <div className="contact-image-container">
+          <img
+            src="/src/assets/images/hon-logo.png"
+            alt="Liang Kuan Hon"
+            className="contact-image"
+          />
+        </div>
+      </div>
+    </main>
+
+
+    <div className="contact-form">
       <form ref={formRef} onSubmit={sendEmail} id="contact-form">
         <input type="text" name="bot-field" style={{ display: "none" }} autoComplete="off" tabIndex="-1" />
         <div style={{ marginTop: "10px", fontWeight: "bold", color: status.color }}>
@@ -61,7 +108,8 @@ const Contact = () => {
 
         <button type="submit">Send</button>
       </form>
-    </main>
+    </div>
+    </>
   );
 };
 

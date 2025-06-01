@@ -8,3 +8,22 @@ html, body {
   flex-direction: column;
   background-color: var(--color-background);
 }
+
+main {
+  margin: 5rem 3rem 0rem;
+}
+
+main h1 {
+  font-size: 3rem;           
+  font-weight: 700;          
+  margin-bottom: 1rem;       
+  color: var(--color-primary);
+}
+
+main p {
+  font-size: 1.125rem;       
+  line-height: 1;          
+  margin-bottom: 1.5rem;     
+  color: var(--color-text);
+  opacity: 0.8;
+}

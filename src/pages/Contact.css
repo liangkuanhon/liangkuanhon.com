@@ -64,3 +64,106 @@ form#contact-form button {
 form#contact-form button:hover {
   background-color: rgba(139, 118, 80, 0.85);
 }
+
+.contact-links {
+  margin: 3rem 0 5rem;
+  display: flex;
+  gap: 3rem;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.icon-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+/* LinkedIn brand color */
+.link.linkedin {
+  color: #0077B5;
+}
+
+.link.linkedin .icon-circle {
+  background-color: #0077B5;
+}
+
+/* Instagram brand color */
+.link.instagram {
+  color: #c13584;
+}
+
+.link.instagram .icon-circle {
+  background-color: #c13584;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 0rem 4rem;
+  gap: 2rem;
+  border-bottom: 1px solid #C4B59B;
+}
+
+/* === Text Container === */
+.contact-text-container {
+  flex: 1;
+  min-width: 300px;
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* === Image Container === */
+.contact-image-container {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.contact-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* === Animation Keyframes === */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

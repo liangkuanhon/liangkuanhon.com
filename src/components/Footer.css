@@ -29,5 +29,6 @@ footer a:focus {
 .footer-link a:not(:last-child)::after {
   content: "|";
   margin-left: 0.5rem;
+  margin-right: 0.5rem;
   color: #ccc;
 }
