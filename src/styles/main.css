@@ -10,14 +10,20 @@ html, body {
 }
 
 main {
-  margin: 5rem 3rem 0rem;
+  margin: 3rem 3rem 0rem;
 }
 
 main h1 {
   font-size: 3rem;           
   font-weight: 700;          
-  margin-bottom: 1rem;       
+  margin-bottom: 0rem;       
   color: var(--color-primary);
+}
+
+main h3 {
+  color: var(--color-primary);
+  opacity: 0.8;
+  margin-bottom: 3rem;
 }
 
 main p {
@@ -25,5 +31,59 @@ main p {
   line-height: 1;          
   margin-bottom: 1.5rem;     
   color: var(--color-text);
-  opacity: 0.8;
+  opacity: 0.7;
+  text-align: justify;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 0rem 4rem;
+  gap: 2rem;
+  border-bottom: 1px solid #C4B59B;
+}
+
+/* === Text Container === */
+.main-text-container {
+  flex: 1;
+  min-width: 300px;
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* === Image Container === */
+.main-image-container{
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.main-image{
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* === Animation Keyframes === */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

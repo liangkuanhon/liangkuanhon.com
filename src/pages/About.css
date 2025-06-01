@@ -1,0 +1,29 @@
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 0rem 4rem;
+  gap: 2rem;
+  border-bottom: 1px solid #C4B59B;
+}
+
+/* === Text Container === */
+.about-text-container {
+  flex: 1;
+  min-width: 300px;
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* === Image Container === */
+.about-image-container {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}

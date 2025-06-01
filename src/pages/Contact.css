@@ -1,39 +1,47 @@
+.contact-form {
+  margin: 4rem 3rem 4rem;
+}
+
 form#contact-form {
-  max-width: 400px;
   margin: 2rem auto;
   padding: 1.5rem 2rem;
   background-color: rgba(245, 241, 234, 0.75); /* translucent cream */
   border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1); /* soft shadow */
-  backdrop-filter: blur(10px);  /* frosted glass effect */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* soft shadow */
+  border: 1px solid rgba(167, 140, 95, 0.3); /* subtle translucent border */
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   font-family: 'Merriweather Sans', sans-serif;
   color: #5a4e42;
+
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  border: 1px solid rgba(167, 140, 95, 0.3); /* subtle translucent border */
+  box-sizing: border-box;
 }
 
+/* ===== Labels ===== */
 form#contact-form label {
   font-weight: 600;
   font-size: 1rem;
   margin-bottom: 0.25rem;
 }
 
+/* ===== Inputs and Textarea ===== */
 form#contact-form input,
 form#contact-form textarea {
+  width: 100%;
   padding: 0.6rem 0.8rem;
   border: 1.5px solid rgba(214, 207, 196, 0.5);
   border-radius: 6px;
   background-color: rgba(255, 254, 251, 0.6); /* translucent input background */
   font-size: 1rem;
   color: #5a4e42;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
-  width: 100%;
-  box-sizing: border-box;
   font-family: inherit;
   resize: vertical;
+  box-sizing: border-box;
+
+  transition: border-color 0.3s ease, background-color 0.3s ease;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
@@ -46,19 +54,44 @@ form#contact-form textarea:focus {
   box-shadow: 0 0 5px rgba(167, 140, 95, 0.4);
 }
 
+/* ===== Form Row Layout ===== */
+form#contact-form .form-row {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch; /* match heights */
+}
+
+form#contact-form .form-left,
+form#contact-form .form-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Make textarea stretch full height of right column */
+form#contact-form .form-right textarea {
+  flex: 1;
+  min-height: 100%;
+  height: 100%;
+}
+
+/* ===== Submit Button ===== */
 form#contact-form button {
-  background-color: rgba(167, 140, 95, 0.8);
-  color: #fffefb;
-  border: none;
+  align-self: flex-end;
+  margin-top: 3rem;
   padding: 0.75rem;
   font-weight: 700;
   font-size: 1.1rem;
+  border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  background-color: rgba(167, 140, 95, 0.8);
+  color: #fffefb;
   font-family: inherit;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  transition: background-color 0.3s ease;
 }
 
 form#contact-form button:hover {
@@ -95,75 +128,22 @@ form#contact-form button:hover {
 
 /* LinkedIn brand color */
 .link.linkedin {
-  color: #0077B5;
+  color: #6B9CB6;
 }
 
 .link.linkedin .icon-circle {
-  background-color: #0077B5;
+  background-color: #6B9CB6;
 }
 
 /* Instagram brand color */
 .link.instagram {
-  color: #c13584;
+  color: #C66B8E;
 }
 
 .link.instagram .icon-circle {
-  background-color: #c13584;
+  background-color: #C66B8E;
 }
 
 .link:hover {
   opacity: 0.7;
-}
-
-.contact-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 0rem 0rem 4rem;
-  gap: 2rem;
-  border-bottom: 1px solid #C4B59B;
-}
-
-/* === Text Container === */
-.contact-text-container {
-  flex: 1;
-  min-width: 300px;
-  animation: slideInLeft 0.8s ease-out forwards;
-}
-
-/* === Image Container === */
-.contact-image-container {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  animation: slideInRight 0.8s ease-out forwards;
-}
-
-.contact-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-/* === Animation Keyframes === */
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }

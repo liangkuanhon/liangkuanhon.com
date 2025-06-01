@@ -7,6 +7,7 @@ const Contact = () => {
   const formRef = useRef(null);
   const [status, setStatus] = useState({ message: "", color: "" });
   const [lastSentTime, setLastSentTime] = useState(0);
+  const [isSending, setIsSending] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -25,24 +26,30 @@ const Contact = () => {
       return;
     }
 
+    setIsSending(true);
+
     emailjs
       .sendForm("service_uedl79e", "template_qu7zerw", formRef.current, "t3lgF6u8-K6Q9DC6E")
       .then(() => {
-        setStatus({ message: "✅ Message sent successfully!", color: "green" });
+        setStatus({ message: "Message sent successfully!", color: "var(--color-success)" });
         formRef.current.reset();
         setLastSentTime(now);
       })
       .catch((err) => {
         console.error("EmailJS error:", err);
-        setStatus({ message: "❌ Failed to send message. Please try again.", color: "red" });
+        setStatus({ message: "Failed to send message. Please try again.", color: "var(--color-error)" });
+      })
+      .finally(() => {
+        setIsSending(false);
       });
   };
 
   return (
     <>
+    <title>Hon’s Contact</title>
     <main>
-      <div className="contact-wrapper">
-        <div className="contact-text-container">
+      <div className="main-wrapper">
+        <div className="main-text-container">
           <h1>Contact</h1>
           <p>Get in touch with me via social media or send me an email.</p>
 
@@ -72,39 +79,49 @@ const Contact = () => {
             </a>
           </div>
         </div>
-
-        <div className="contact-image-container">
+        
+        <div className="main-image-container">
           <img
             src="/src/assets/images/hon-logo.png"
             alt="Liang Kuan Hon"
-            className="contact-image"
+            className="main-image"
           />
         </div>
       </div>
     </main>
 
+    
 
     <div className="contact-form">
+      <h2>Send me an email!</h2>
+
       <form ref={formRef} onSubmit={sendEmail} id="contact-form">
         <input type="text" name="bot-field" style={{ display: "none" }} autoComplete="off" tabIndex="-1" />
+        
         <div style={{ marginTop: "10px", fontWeight: "bold", color: status.color }}>
           {status.message}
         </div>
 
-        <label htmlFor="email">Your Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-          required
-        />
+        <div className="form-row">
+          <div className="form-left">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              required
+            />
 
-        <label htmlFor="name">Your Name:</label>
-        <input type="text" id="name" name="name" required />
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
 
-        <label htmlFor="message">Your Message:</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
+          <div className="form-right">
+            <label htmlFor="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+        </div>
 
         <button type="submit">Send</button>
       </form>
