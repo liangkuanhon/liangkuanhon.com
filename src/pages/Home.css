@@ -1,0 +1,52 @@
+.container {
+  height: 500vh;       
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.video {
+  width: 800px;
+  height: 450px;
+  border: 2px solid white;
+  position: sticky;
+  top: 20px;
+  background-color: black;
+  display: block;
+}
+
+.border {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 4rem 0;
+}
+
+.border::before,
+.border::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #C4B59B;
+}
+
+.border:not(:empty)::before {
+  margin-right: 2rem;
+}
+
+.border:not(:empty)::after {
+  margin-left: 2rem;
+}
+
+.border span {
+  white-space: nowrap;
+}
+
+.border span {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}

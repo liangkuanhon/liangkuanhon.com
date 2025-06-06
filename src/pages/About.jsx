@@ -2,6 +2,7 @@ import "./About.css";
 import React from 'react';
 
 export default function About() {
+
   return (
     <>
       <title>Hon’s About</title>
@@ -10,10 +11,9 @@ export default function About() {
           <div className="main-text-container">
             <h1>About</h1>
             <h3>Master the system. Lead the future. Based in Singapore.</h3>
-            <p>I'm Hon — an architect driven by curiosity, with a focus on AI and a background in cybersecurity. 
-              I build systems that are intelligent, secure, and purposeful. 
-              My work blends technical depth with clean design and independent thinking. 
-              I believe in doing things that matter — and doing it right.</p>
+            <p>I'm Hon — an architect focused on AI, with roots in cybersecurity. 
+              I build intelligent, secure systems with purpose and precision. 
+              Clean design, deep thinking, and doing things that matters — and doing it right.</p>
           </div>
 
           <div className="main-image-container">
@@ -25,6 +25,56 @@ export default function About() {
           </div>
         </div>
       </main>
+
+      <div className="secondary-wrapper alt-bg">
+        <div className="wrapper-image">
+          <img src="/src/assets/images/dumbo.png" alt="Luminova Project" />
+        </div>
+        <div className="wrapper-text" style={{ flex: '0.35', maxWidth: '50%' }}>
+          <h2>Moreee...</h2>
+          <p id="line-break">
+          Adapter<br/>
+          Cadder<br/>
+          Dreamer<br/>
+          Designer<br/>
+          Lifesaver<br/>
+          Childhood favourite: Dumbo<br/>
+          </p>
+        </div>
+      </div>
+
+      <div className="secondary-wrapper">
+        <div className="wrapper-text" style={{ flex: '0.3', maxWidth: '50%' }}>
+          <h2>The Project That Started It All</h2>
+          <p>What started as a typical uni module sparked something deeper — a shift from building projects to designing solutions that matter. 
+            It ignited a drive to create with purpose, solve real problems, and bring clarity and intention to every line of code.</p>
+          <a 
+              href="https://dti2023luminova.wixsite.com/lightscapepavilion"
+              target="_blank"
+              aria-label="LinkedIn"
+              rel="noopener noreferrer"
+              className="wrapper-link"
+            >Project documentation</a>
+        </div>
+        <div className="wrapper-image" style={{ flex: '0.65', maxWidth: '70%' }}>
+          <a 
+            href="https://dti2023luminova.wixsite.com/lightscapepavilion"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Luminova Project"
+          >
+            <img src="/src/assets/images/luminova.png" alt="Luminova Project" />
+          </a>
+        </div>  
+      </div>
+
+      <div className="secondary-wrapper alt-bg">
+        
+      </div>
+
+      <div className="tertiary-wrapper">
+        
+      </div>
     </>
   );
 }

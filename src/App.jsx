@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Contact from './pages/Contact';
 // import Portfolio from './pages/Portfolio';
 import About from './pages/About';
-// import Home from './pages/Home';
+import Home from './pages/Home';
 
 export default function App() {
   return (
@@ -13,7 +13,7 @@ export default function App() {
       <Header />
       <main>
         <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           {/* <Route path="/portfolio" element={<Portfolio />} /> */}
           <Route path="/contact" element={<Contact />} />
