@@ -16,13 +16,12 @@ nav{
 }
 
 nav a {
-  color: var(--font-text);            /* Override default blue */
-  text-decoration: none;   /* Remove underline */
+  color: var(--font-text);           
+  text-decoration: none;   
 }
 
 nav a:hover {
   color: #a3947a;
-  text-decoration: underline;
 }
 
 body {

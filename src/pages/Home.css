@@ -1,9 +1,4 @@
-.container {
-  height: 500vh;       
-  padding-top: 20px;
-  display: flex;
-  justify-content: center;
-}
+
 
 .video {
   width: 800px;
@@ -19,7 +14,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 4rem 0;
+  margin: 4rem 0 0;
 }
 
 .border::before,
@@ -35,10 +30,6 @@
 
 .border:not(:empty)::after {
   margin-left: 2rem;
-}
-
-.border span {
-  white-space: nowrap;
 }
 
 .border span {
