@@ -15,15 +15,6 @@ nav{
     font-family: var(--font-primary);
 }
 
-nav a {
-  color: var(--font-text);           
-  text-decoration: none;   
-}
-
-nav a:hover {
-  color: #a3947a;
-}
-
 body {
   font-family: var(--font-text);
   margin: 0;

@@ -88,3 +88,21 @@
   text-transform: uppercase;
   white-space: nowrap;
 }
+
+/* ------------------ FLY-IN KEYFRAMES ------------------ */
+@keyframes flyInLeft {
+  0%   { clip-path: inset(0 100% 0 0); }   /* hidden off-screen right  */
+  100% { clip-path: inset(0 50% 0 0); }    /* normal half              */
+}
+
+@keyframes flyInRight {
+  0%   { clip-path: inset(0 0 0 100%); }   /* hidden off-screen left   */
+  100% { clip-path: inset(0 0 0 50%); }    /* normal half              */
+}
+
+/* ------------------ STATES ------------------ */
+.pre-left  { clip-path: inset(0 100% 0 0); }   /* start fully hidden */
+.pre-right { clip-path: inset(0 0 0 100%); }
+
+.fly-left  { animation: flyInLeft 0.9s ease-out forwards; }
+.fly-right { animation: flyInRight 0.9s ease-out forwards; }

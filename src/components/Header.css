@@ -31,8 +31,23 @@
     gap: 2rem;
   }
 
-  .header-links nav a:hover {
-  text-decoration: none; 
+  /* .header-links nav a:hover{
+    text-decoration: none; 
+    color: var(--color-text);
+    position: relative;
+  } */
+
+  nav a {
+    color: var(--font-text);
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    color: var(--color-hover);
+  }
+
+  nav a.active {
+    color: var(--color-hover);
   }
 
   header nav {
