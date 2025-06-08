@@ -1,68 +1,44 @@
 import "./Home.css";
 import { projects } from "/public/projects/projects";
 import { Link } from "react-router-dom";
-import React, { useEffect, useRef } from "react";
+import React, {useState} from "react";
 
-const ScrollVideo = () => {
-  const videoRef = useRef(null);
-  const rafId = useRef(null);
-  const durationRef = useRef(0);
+export default function Home() {
 
-  // Define the scroll start and end pixel positions where video scrubbing happens
-  const scrollStart = 500;  // px from top
-  const scrollEnd = 1500;   // px from top
+  const [hoveredSide, setHoveredSide] = useState(null); // 'left' | 'right' | null
 
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const onLoadedMetadata = () => {
-      durationRef.current = video.duration;
-      video.pause();
-
-      const updateVideoTime = () => {
-        const scrollY = window.scrollY;
-
-        if (scrollY < scrollStart) {
-          video.currentTime = 0;
-        } else if (scrollY > scrollEnd) {
-          video.currentTime = durationRef.current;
-        } else {
-          const scrollFraction = (scrollY - scrollStart) / (scrollEnd - scrollStart);
-          video.currentTime = scrollFraction * durationRef.current;
-        }
-
-        rafId.current = requestAnimationFrame(updateVideoTime);
-      };
-
-      rafId.current = requestAnimationFrame(updateVideoTime);
-    };
-
-    video.addEventListener("loadedmetadata", onLoadedMetadata);
-
-    return () => {
-      video.removeEventListener("loadedmetadata", onLoadedMetadata);
-      cancelAnimationFrame(rafId.current);
-    };
-  }, []);
+  const handleMouseMove = (e) => {
+    const { left, width } = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - left;
+    setHoveredSide(x < width / 2 ? "left" : "right");
+  };
 
   return (
     <>
-      
-      {/* Video (normal flow) */}
-      <div style={{ height: "400px" }}>
-        <video
-          ref={videoRef}
-          muted
-          preload="auto"
-          playsInline
-          style={{ width: "100%", height: "100%" }}
-          src="/src/assets/videos/video.mp4"
-        />
+      <title>Hon's Home</title>
+      <div
+        className="image-container"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={() => setHoveredSide(null)}
+      >
+        <div
+          className={`image left ${
+            hoveredSide === "left" ? "expanded" : hoveredSide === "right" ? "collapsed" : ""
+          }`}
+        >
+          <img src="/images/nestcart.png" alt="Left" />
+        </div>
+        <div
+          className={`image right ${
+            hoveredSide === "right" ? "expanded" : hoveredSide === "left" ? "collapsed" : ""
+          }`}
+        >
+          <img src="/images/dumbo.png" alt="Right" />
+        </div>
       </div>
 
       <div className="border">
-        <span>WORK, SIMPLY PUT...</span>
+        <span>MY WORK, SIMPLY PUT...</span>
       </div>
 
       <div className="grid-container">
@@ -79,6 +55,4 @@ const ScrollVideo = () => {
       </div>
     </>
   );
-};
-
-export default ScrollVideo;
+}

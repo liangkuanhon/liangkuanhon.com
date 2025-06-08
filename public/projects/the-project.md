@@ -1,4 +1,4 @@
-<title>Hon's Luminova</title>
+<title>Hon's The Project</title>
 
 <div class="main">
 <div class="main-wrapper">
