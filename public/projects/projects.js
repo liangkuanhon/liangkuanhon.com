@@ -2,9 +2,9 @@ export const projects = [
   {
     id: 1,
     slug: "nest-cart",
-    name: "Project A",
-    desc: "AI-powered portfolio site.",
-    image: "/src/assets/images/luminova.png",
+    name: "Nest Cart",
+    desc: "Android App",
+    image: "/src/assets/images/nestcart.png",
   },
   {
     id: 2,

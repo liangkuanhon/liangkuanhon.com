@@ -1,16 +1,27 @@
-# Project A
+<title>Hon's Luminova</title>
 
-This is **Project A**, a web app built with React.
+<div class="main">
+<div class="main-wrapper">
+  <div class="main-text-container">
+    <h1>Nest Cart</h1>
+    <h3>January 2025</h3>
+    <p>
+      We created a collaborative grocery app that allows users to create share grocery lists, and optimise shopping routes. Won the Singtel Honourable Mention Award.
+    </p>
+  </div>
 
-## Features
+  <div class="main-image-container">
+    <img
+      src="/src/assets/images/hon-logo.png"
+      alt="Liang Kuan Hon"
+      class="main-image"
+    />
+  </div>
+</div>
+</div>
 
-- User authentication
-- Real-time updates
-- Responsive design
+<div class="full-width-border"></div>
 
-![App Screenshot](./images/project-a-screenshot.png)
-
-## Technologies Used
-
-React, Node.js, Express, MongoDB
-
+<div class="secondary-wrapper">
+    <p>In progress</p>
+<div>

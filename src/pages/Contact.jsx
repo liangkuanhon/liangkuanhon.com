@@ -90,7 +90,7 @@ const Contact = () => {
       </div>
     </main>
 
-    
+    <div class="full-width-border"></div>
 
     <div className="contact-form">
       <h2>Send me an email!</h2>

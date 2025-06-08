@@ -62,7 +62,7 @@ const ScrollVideo = () => {
       </div>
 
       <div className="border">
-        <span>SOME OF MY LATEST WORKS</span>
+        <span>WORK, SIMPLY PUT...</span>
       </div>
 
       <div className="grid-container">
