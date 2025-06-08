@@ -7,7 +7,7 @@ export default function Header() {
       <header>
         <Link to="/">
           <img
-            src="/src/assets/images/hon-logo.png" // adjust path as needed
+            src="/images/hon-logo.png" // adjust path as needed
             alt="Liang Kuan Hon Logo"
             className="header-logo"
           />

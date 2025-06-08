@@ -16,7 +16,7 @@ export default function Portfolio() {
 
           <div className="main-image-container">
             <img
-              src="/src/assets/images/hon-logo.png"
+              src="/images/hon-logo.png"
               alt="Liang Kuan Hon"
               className="main-image"
             />

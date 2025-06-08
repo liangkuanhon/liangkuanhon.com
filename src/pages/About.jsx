@@ -18,7 +18,7 @@ export default function About() {
 
           <div className="main-image-container">
             <img
-              src="/src/assets/images/hon-logo.png"
+              src="/images/hon-logo.png"
               alt="Liang Kuan Hon"
               className="main-image"
             />
@@ -30,7 +30,7 @@ export default function About() {
 
       <div className="secondary-wrapper alt-bg">
         <div className="wrapper-image">
-          <img src="/src/assets/images/dumbo.png" alt="Luminova Project" />
+          <img src="/images/dumbo.png" alt="Luminova Project" />
         </div>
         <div className="wrapper-text" style={{ flex: '0.35', maxWidth: '50%' }}>
           <h2>Moreee...</h2>
@@ -65,7 +65,7 @@ export default function About() {
             rel="noopener noreferrer"
             aria-label="Visit Luminova Project"
           >
-            <img src="/src/assets/images/luminova.png" alt="Luminova Project" />
+            <img src="/images/luminova.png" alt="Luminova Project" />
           </a>
         </div>  
       </div>

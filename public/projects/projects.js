@@ -4,7 +4,7 @@ export const projects = [
     slug: "nest-cart",
     name: "Nest Cart",
     desc: "Android App",
-    image: "/src/assets/images/nestcart.png",
+    image: "/images/nestcart.png",
   },
   {
     id: 2,
@@ -19,14 +19,14 @@ export const projects = [
     slug: "dutchpay",
     name: "Dutchpay",
     desc: "Expense Splitting Bot",
-    image: "/src/assets/images/luminova.png",
+    image: "/images/luminova.png",
   },
     {
     id: 4,
     slug: "the-project",
     name: "The Project",
     desc: "My Genesis - Luminova",
-    image: "/src/assets/images/luminova1.png",
+    image: "/images/luminova1.png",
   },
 
 ];
