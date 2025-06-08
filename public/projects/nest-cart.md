@@ -12,7 +12,7 @@
 
   <div class="main-image-container">
     <img
-      src="/src/assets/images/hon-logo.png"
+      src="/images/hon-logo.png"
       alt="Liang Kuan Hon"
       class="main-image"
     />
