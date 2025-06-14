@@ -12,7 +12,7 @@ import Error from './pages/Error';
 
 export default function App() {
   return (
-    <>
+    <div className="hero">
       <Header />
       <ScrollToTop />
       <main>
@@ -26,6 +26,6 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

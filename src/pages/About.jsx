@@ -27,7 +27,7 @@ export default function About() {
         </div>
       </main>
 
-      <div class="full-width-border"></div>
+      <div className="full-width-border"></div>
 
       <div className="secondary-wrapper alt-bg">
         <div className="wrapper-image">

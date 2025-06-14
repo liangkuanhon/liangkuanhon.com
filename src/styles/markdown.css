@@ -7,13 +7,12 @@
   margin-bottom: -1rem;
 }
 
-/* .container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-} */
+.link{
+  font: var(--font-text);
+  color: var(--color-borders);
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-border);
+}
 
 .main-wrapper {
   display: flex;
@@ -46,19 +45,25 @@
 
 .markdown-image {
   width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
   box-sizing: border-box;
   padding: 0 3.5rem;
-  margin: 4rem 0rem;
+  margin: 3rem 0;
+  justify-content: center;
+  /* background-color: darkblue; */
 }
 
 .markdown-image img {
+  flex: 1 1 0;     /* images grow and shrink equally */
+  max-width: 100%; /* no bigger than container */
   height: auto;
   display: block;
-  margin: 0 auto; 
-  max-width: 100%; 
-  border: 1.5px solid var(--color-accent);       /* white border, adjust thickness as you want */
-  border-radius: 15px;           /* rounded corners, adjust radius as you want */
-  /* box-sizing: border-box;  */
+  border-radius: 15px;
+  border: 1px solid var(--color-accent);
+  box-sizing: border-box;
 }
 
 .markdown-text {
@@ -70,11 +75,11 @@
 
 .markdown-text h3 {
   opacity: 0.9;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin: 0;
 }
 
 .markdown-text p {
-  opacity: 0.6;
+  opacity: 0.7;
   margin-bottom: 1.5rem;
 }

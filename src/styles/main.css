@@ -7,6 +7,16 @@ html, body {
   display: flex;
   flex-direction: column;
   background-color: var(--color-background);
+  overflow-x: hidden;
+}
+
+.hero {
+  width: 90%;             /* Use 90% of viewport width */
+  max-width: 1200px;      /* But never wider than 1200px */
+  min-width: 320px;       /* Don’t get smaller than 320px */
+  margin: 0 auto;         /* Center horizontally */
+  padding: 0 1rem;        /* Padding inside the container */
+  box-sizing: border-box; /* Include padding in width */
 }
 
 main {
