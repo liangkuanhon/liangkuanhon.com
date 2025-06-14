@@ -46,6 +46,8 @@ export default function About() {
         </div>
       </div>
 
+      <div className="full-width-border"></div>
+
       <div className="secondary-wrapper">
         <div className="wrapper-text" style={{ flex: '0.3', maxWidth: '50%' }}>
           <h2>The Project That Started It All</h2>

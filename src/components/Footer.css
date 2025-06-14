@@ -4,6 +4,7 @@
 
 
 footer {
+  width: 100vw;
   background-color: var(--color-secondary);
   color: #6B5E3C;
   font-family: 'Playfair Display', serif;

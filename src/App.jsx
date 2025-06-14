@@ -12,20 +12,22 @@ import Error from './pages/Error';
 
 export default function App() {
   return (
-    <div className="hero">
+    <>
       <Header />
-      <ScrollToTop />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/portfolio/:slug" element={<Project />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/error" element={<Error />} />
-        </Routes>
-      </main>
+      <div className="hero">
+        <ScrollToTop />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/portfolio/:slug" element={<Project />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/error" element={<Error />} />
+          </Routes>
+        </main>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

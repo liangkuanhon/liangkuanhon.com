@@ -68,7 +68,7 @@ p {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 4rem;
+  margin: 4rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -183,5 +183,72 @@ p {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+
+/* Global mobile responsiveness */
+@media (max-width: 768px) {
+  header,
+  .main-wrapper,
+  .header-links,
+  .grid-container,
+  .social-icons,
+  nav {
+    flex-direction: column !important;
+    align-items: flex-start;
+    gap: 1rem !important;
+  }
+
+  main {
+    margin: 1.5rem 1rem !important;
+  }
+
+  .main h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card {
+    max-width: 100% !important;
+    margin: 0.5rem 0 !important;
+  }
+
+  .card-image {
+    height: auto !important;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.2rem !important;
+  }
+
+  h3,
+  p {
+    font-size: 1rem !important;
+  }
+
+  .main-wrapper {
+    padding-bottom: 2rem;
+  }
+
+  .main-text-container,
+  .main-image-container {
+    min-width: 100%;
+  }
+
+  .full-width-border {
+    margin-bottom: 2rem;
+  }
+
+  .header-container {
+    padding: 1rem !important;
+  }
+
+  .header-links {
+    margin-right: 0 !important;
   }
 }

@@ -3,7 +3,7 @@
 
   .header-container {
     width: 100%;
-    max-width: 90%;
+    max-width: 1100px;
     margin: 0 auto 2rem;
     padding: 0 2rem;
     position: relative;
@@ -31,7 +31,7 @@
     gap: 2rem;
   }
 
-  .header-links nav a:hover{
+  .header-links nav a.active:hover{
     text-decoration: none; 
     color: var(--color-text);
     position: relative;
@@ -73,3 +73,31 @@
   .social-icons a:hover {
     color: var(--color-text);
   }
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .header-links {
+    margin-right: 0;
+    flex: 1 1 100%;           /* full width container */
+    flex-direction: column;   /* stack nav and social vertically */
+    gap: 1rem;
+  }
+
+  nav {
+    font-size: 1rem;          /* slightly smaller font */
+    flex-wrap: wrap;          /* wrap nav links */
+    justify-content: flex-start;
+    gap: 1rem;
+    order: 1;                 /* nav on top */
+  }
+
+  .social-icons {
+    display: flex;            /* keep row */
+    gap: 1rem;
+    font-size: 1.2rem;        /* smaller icons */
+    justify-content: flex-start; /* left align the icons */
+    flex-wrap: nowrap;
+    order: 2;                 /* social below nav */
+  }
+}
+
