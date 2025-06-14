@@ -7,6 +7,7 @@ import Portfolio from './pages/Portfolio';
 import Project from './pages/Project';
 import About from './pages/About';
 import Home from './pages/Home';
+import Error from './pages/Error';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/:slug" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/error" element={<Error />} />
         </Routes>
       </main>
       <Footer />

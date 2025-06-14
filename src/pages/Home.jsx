@@ -5,53 +5,21 @@ import React, {useState, useEffect} from "react";
 
 export default function Home() {
 
-  const [hoveredSide, setHoveredSide] = useState(null); // 'left' | 'right' | null
-  const [entered, setEntered]   = useState(false);
-
-  useEffect(() => {
-    const id = requestAnimationFrame(() => setEntered(true));
-    return () => cancelAnimationFrame(id);
-  }, []);
-
-  const handleMouseMove = (e) => {
-    const { left, width } = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - left;
-    setHoveredSide(x < width / 2 ? "left" : "right");
-  };
-
-  return (
+    return (
     <>
       <title>Hon's Home</title>
-      <div
-        className="image-container"
-        onMouseMove={handleMouseMove}
-        onMouseLeave={() => setHoveredSide(null)}
-      >
-        {/* LEFT HALF */}
-        <div
-          className={[
-            "image",
-            "left",
-            !entered ? "pre-left" : "fly-left",         // fly-in once
-            hoveredSide === "left"  ? "expanded"  :
-            hoveredSide === "right" ? "collapsed" : ""
-          ].join(" ")}
-        >
-          <img src="/images/nestcart.png" alt="Left" />
-        </div>
+      <div className="image-hover-wrapper">
+          {/* Halves */}
+          <img src="/images/nestcart.png" className="half left" alt="Left Half A" />
+          <img src="/images/luminova.png" className="half right" alt="Right Half B" />
 
-        {/* RIGHT HALF */}
-        <div
-          className={[
-            "image",
-            "right",
-            !entered ? "pre-right" : "fly-right",
-            hoveredSide === "right" ? "expanded"  :
-            hoveredSide === "left"  ? "collapsed" : ""
-          ].join(" ")}
-        >
-          <img src="/images/luminova.png" alt="Right" />
-        </div>
+          {/* Hover zones */}
+          <Link to="/portfolio" className="hover-zone left-zone"></Link>
+          <Link to="/about" className="hover-zone right-zone"></Link>
+
+          {/* Full images */}
+          <img src="/images/nestcart.png" className="full-image full-a" alt="Full A" />
+          <img src="/images/luminova.png" className="full-image full-b" alt="Full B" />
       </div>
 
       <div className="border">

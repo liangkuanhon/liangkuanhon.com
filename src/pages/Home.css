@@ -1,59 +1,68 @@
-.image-container {
+.image-hover-wrapper {
   position: relative;
   width: 100%;
   height: 500px;
   overflow: hidden;
-  margin: 2rem auto;
-  cursor: pointer;
 }
 
-/* Both images fill container and are absolutely positioned */
-.image {
+/* Half images (cropped) */
+.half {
   position: absolute;
   top: 0;
-  bottom: 0;
-  width: 100%;
   height: 100%;
-  overflow: hidden;
-  transition: clip-path 2s cubic-bezier(0.25, 1, 0.5, 1), z-index 0.5s ease;
-}
-
-.image img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
-  pointer-events: none;
-  user-select: none;
-  transition: transform 1.2s cubic-bezier(0.33, 1, 0.68, 1);
+  z-index: 1;
 }
 
-/* Initial state: each image shows half */
-.image.left {
-  clip-path: inset(0 50% 0 0);
+.left {
+  left: 0;
+  object-position: left;
+  clip-path: inset(0 50% 0 0); 
+}
+
+.right {
+  left: 0;
+  object-position: right;
+  clip-path: inset(0 0 0 50%); 
+}
+
+.full-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease;
   z-index: 2;
 }
-.image.right {
-  clip-path: inset(0 0 0 50%);
-  z-index: 1;
-}
 
-/* When hovered, expand full */
-.image.expanded {
-  clip-path: inset(0 0 0 0);
+/* Transparent hover zones */
+.hover-zone {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
   z-index: 3;
 }
-.image.expanded img {
-  transform: scale(1.05);
+
+.left-zone {
+  left: 0;
 }
 
-/* Collapse back to half */
-.image.collapsed.left {
-  clip-path: inset(0 50% 0 0);
-  z-index: 1;
+.right-zone {
+  right: 0;
 }
-.image.collapsed.right {
-  clip-path: inset(0 0 0 50%);
-  z-index: 1;
+
+/* Hover triggers */
+.left-zone:hover ~ .full-a {
+  opacity: 1;
+}
+
+.right-zone:hover ~ .full-b {
+  opacity: 1;
 }
 
 

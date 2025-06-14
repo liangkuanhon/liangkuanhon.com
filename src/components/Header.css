@@ -31,11 +31,11 @@
     gap: 2rem;
   }
 
-  /* .header-links nav a:hover{
+  .header-links nav a:hover{
     text-decoration: none; 
     color: var(--color-text);
     position: relative;
-  } */
+  }
 
   nav a {
     color: var(--font-text);
@@ -51,6 +51,7 @@
   }
 
   header nav {
+    font-size: large;
     display: flex;
     gap: 2rem;
     justify-content: center;
