@@ -1,4 +1,5 @@
 import "./About.css";
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 export default function About() {
@@ -59,14 +60,9 @@ export default function About() {
             >Project documentation</a>
         </div>
         <div className="wrapper-image" style={{ flex: '0.65', maxWidth: '70%' }}>
-          <a 
-            href="https://dti2023luminova.wixsite.com/lightscapepavilion"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit Luminova Project"
-          >
-            <img src="/images/luminova.png" alt="Luminova Project" />
-          </a>
+            <Link to="/portfolio" aria-label="Go to Portfolio">
+              <img src="/images/luminova.png" alt="Luminova Project" />
+            </Link>
         </div>  
       </div>
 
