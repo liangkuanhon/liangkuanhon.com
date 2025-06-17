@@ -62,7 +62,7 @@ export default function About() {
             >Project documentation</a>
         </div>
         <div className="wrapper-image" style={{ flex: '0.65', maxWidth: '70%' }}>
-            <Link to="/portfolio" aria-label="Go to Portfolio">
+            <Link to="/portfolio/the-project" aria-label="Go to Portfolio">
               <img src="/images/luminova.png" alt="Luminova Project" />
             </Link>
         </div>  
