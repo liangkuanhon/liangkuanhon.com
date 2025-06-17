@@ -37,7 +37,7 @@ export default function Home() {
         <span>MY WORK, SIMPLY PUT...</span>
       </div>
 
-      <div className="grid-container">
+      <div className="grid-containers">
         {projects.slice(0, 3).map((project) => (
           <Link to={`/portfolio/${project.slug}`} className="card" key={project.id}>
             <img src={project.image} alt={project.name} className="card-image" />
