@@ -26,11 +26,11 @@ export default function Home() {
 
           {/* Hover zones */}
           <Link to="/about" className="hover-zone left-zone"></Link>
-          <Link to="/porfolio" className="hover-zone right-zone"></Link>
+          <Link to="/portfolio" className="hover-zone right-zone"></Link>
 
           {/* Full images */}
-          <img src="/images/FULL1.png" className="full-image full-a" alt="Full A" />
-          <img src="/images/FULL2.png" className="full-image full-b" alt="Full B" />
+          <img src="/images/profile-full-left.png" className="full-image full-a" alt="Full A" />
+          <img src="/images/profile-full-right.png" className="full-image full-b" alt="Full B" />
       </div>
 
       <div className="border">
