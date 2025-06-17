@@ -11,7 +11,7 @@ export default function About() {
         <div className="main-wrapper">
           <div className="main-text-container">
             <h1>About</h1>
-            <h3>Master the system. Lead the future. Based in Singapore.</h3>
+            <h3>Designing solutions that matters. Based in Singapore.</h3>
             <p>I'm Hon — a student focused on AI, with roots in cybersecurity. 
               I build intelligent, secure systems with purpose and precision. 
               Clean design, deep thinking, and doing things that matters — and doing it right.</p>

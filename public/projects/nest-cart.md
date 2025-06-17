@@ -6,7 +6,7 @@
     <h1>Nest Cart</h1>
     <h3>January 2025</h3>
     <p>
-      We created a collaborative grocery app that allows users to create share grocery lists, and optimise shopping routes. Won the Singtel Honourable Mention Award.
+      We created a collaborative grocery app that allows users to create share grocery lists, and optimise shopping routes. Awarded Singtel Honourable Mention Award.
     </p>
   </div>
 

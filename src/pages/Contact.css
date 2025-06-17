@@ -104,15 +104,17 @@ form#contact-form button:hover {
   gap: 3rem;
 }
 
-.link {
+.links {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   font-weight: 600;
-  text-decoration: none;
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 1rem;
   cursor: pointer;
+  border: none;
+  outline: none;
+  text-decoration: none;
 }
 
 .icon-circle {
@@ -127,23 +129,23 @@ form#contact-form button:hover {
 }
 
 /* LinkedIn brand color */
-.link.linkedin {
+.links.linkedin {
   color: #6B9CB6;
 }
 
-.link.linkedin .icon-circle {
+.links.linkedin .icon-circle {
   background-color: #6B9CB6;
 }
 
 /* Instagram brand color */
-.link.instagram {
+.links.instagram {
   color: #C66B8E;
 }
 
-.link.instagram .icon-circle {
+.links.instagram .icon-circle {
   background-color: #C66B8E;
 }
 
-.link:hover {
+.links:hover {
   opacity: 0.7;
 }

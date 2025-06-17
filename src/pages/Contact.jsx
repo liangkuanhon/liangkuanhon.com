@@ -58,7 +58,7 @@ const Contact = () => {
               href="https://linkedin.com/in/liangkuanhon"
               target="_blank"
               rel="noopener noreferrer"
-              className="link linkedin"
+              className="links linkedin"
             >
               <span className="icon-circle">
                 <i className="fab fa-linkedin"></i>
@@ -70,7 +70,7 @@ const Contact = () => {
               href="https://instagram.com/liangkuanhon"
               target="_blank"
               rel="noopener noreferrer"
-              className="link instagram"
+              className="links instagram"
             >
               <span className="icon-circle">
                 <i className="fab fa-instagram"></i>
