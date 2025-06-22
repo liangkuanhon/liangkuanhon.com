@@ -12,7 +12,7 @@ export default function About() {
           <div className="main-text-container">
             <h1>About</h1>
             <h3>Designing solutions that matters. Based in Singapore.</h3>
-            <p>I'm Hon — a student focused on AI, with roots in cybersecurity. 
+            <p>I'm Hon — a student focused on cybersecurity, with roots in AI. 
               I build intelligent, secure systems with purpose and precision. 
               Clean design, deep thinking, and doing things that matters — and doing it right.</p>
           </div>

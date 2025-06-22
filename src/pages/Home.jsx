@@ -34,7 +34,9 @@ export default function Home() {
       </div>
 
       <div className="border">
-        <span>MY WORK, SIMPLY PUT...</span>
+        <span className="hon"> Hack</span>
+        <span className="hon">Own</span>
+        <span className="hon">Neutralise</span> 
       </div>
 
       <div className="grid-containers">

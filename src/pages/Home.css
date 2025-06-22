@@ -1,3 +1,8 @@
+.hon::first-letter {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
 .image-hover-wrapper {
   position: relative;
   width: 100%;
@@ -86,6 +91,8 @@
   align-items: center;
   width: 100%;
   margin: 4rem 0 0;
+  gap: 0.5rem;
+  opacity: 0.75;
 }
 
 .border::before,
@@ -108,9 +115,15 @@
   font-size: 1rem;
   font-weight: 500;
   color: var(--color-text);
-  letter-spacing: 0.8px;
+  letter-spacing: 0.8px;  
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.border span:not(:last-child)::after {
+  content: " • ";  /* a space-dot-space separator */
+  color: var(--color-text);
+  /* optionally style the dot color or size here */
 }
 
 /* ------------------ FLY-IN KEYFRAMES ------------------ */
